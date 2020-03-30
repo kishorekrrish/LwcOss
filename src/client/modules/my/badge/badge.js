@@ -5,6 +5,12 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 
-slot {
-    display: flex;
+import { LightningElement, api } from 'lwc';
+
+export default class cBadge extends LightningElement {
+    @api label;
+
+    connectedCallback() {
+        this.classList.add('slds-badge');
+    }
 }
