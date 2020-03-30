@@ -12,7 +12,7 @@ export default class cBadge extends LightningElement {
 
 
     connectedCallback() {
-        this.classList.add('slds-badge');
+        //this.classList.add('slds-badge');
         fetch('data/accounts')
             .then(response => {
                  console.log(response.json());
