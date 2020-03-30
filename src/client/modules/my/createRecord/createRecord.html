@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Record" icon-name="standard:account">
+        <div class="slds-p-around_x-small">
+            Name:
+            <input class="slds-input" value={name} onchange={handleNameChange}/>
+            Industry:
+            <input class="slds-input" value={Industry} onchange={handleIndChange}/>
+            Phone:
+            <input class="slds-input" value={Phone} onchange={handlePhnChange}/>
+            <button class="slds-button" label="Save" onclick={handleClick}/>
+        </div>
+    </lightning-card>
+</template>
