@@ -22,10 +22,10 @@ module.exports = app => {
             accounts = data.rows.map(accountRecord => {
                 return {
                     id: accountRecord.sfid,
-                    Name: accountRecord.Name,
-                    Controlling_Picklist__c: accountRecord.Controlling_Picklist__c,
-                    Dependent_Picklist__c: accountRecord.Dependent_Picklist__c,
-                    JobType__c: accountRecord.JobType__c
+                    Name: accountRecord.name,
+                    Controlling_Picklist__c: accountRecord.controlling_picklist__c,
+                    Dependent_Picklist__c: accountRecord.dependent_picklist__c,
+                    JobType__c: accountRecord.jobtype__c
                 };
             });
             res.json(accounts);
