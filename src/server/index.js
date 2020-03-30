@@ -5,6 +5,7 @@ const jsforce = require('jsforce');
 const express = require('express');
 module.exports = app => {
     // put your express app logic here
+    app.use(express.json());
     app.get('/data/accounts', (req, res) => {
         // do stuff
         let accounts = [];
@@ -30,6 +31,6 @@ module.exports = app => {
             res.json(accounts);
             client.end();
           });
-        res.json({ status: 'ok' });
+        
     });
 };
