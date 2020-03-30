@@ -1,0 +1,21 @@
+<template>
+    <tr >
+        <td data-label="Prospecting" >
+            <div class="slds-truncate" title="Prospecting">
+                Name:
+                <input data-id={Id} name="Name"  class="slds-input" value={Name} variant="label-inline" onchange={handleNameChange}/>
+            </div>
+        </td>
+        <td data-label="Prospecting" >
+            <div class="slds-truncate" title="Prospecting">
+                Industry:
+                <input data-id={Id} name="Industry" value={Industry} variant="label-inline" onchange={handleIndustryChange}/>
+            </div>
+        </td>
+        <td data-label="Prospecting" >
+            <a name={indexVariable} onclick={remove}>
+                <my-icon icon-name="utility:delete" alternative-text="delete" size="small"></my-icon>
+            </a>
+        </td>
+    </tr>
+</template>
