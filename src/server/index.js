@@ -18,7 +18,7 @@ module.exports = app => {
           
           client.query('SELECT sfid,name,controlling_picklist__c,dependent_picklist__c,jobtype__c FROM salesforce.account;', (err, data) => {
             if (err) console.log(err);
-            
+            console.log(data.rows);
             accounts = data.rows.map(accountRecord => {
                 return {
                     id: accountRecord.sfid,
