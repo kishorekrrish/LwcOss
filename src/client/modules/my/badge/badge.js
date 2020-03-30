@@ -10,7 +10,13 @@ import { LightningElement, api } from 'lwc';
 export default class cBadge extends LightningElement {
     @api label;
 
+
     connectedCallback() {
         this.classList.add('slds-badge');
+        fetch('data/accounts')
+            .then(response => {
+                 console.log(response.json());
+            })
+            
     }
 }
